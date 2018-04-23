@@ -34,7 +34,7 @@ def is_number(s):
     return False
 
 
-file.writelines('Role Information:\n')
+file.writelines('Role Information\n')
 for contrib in root.iter('contrib'):
     ctype = contrib.attrib
     if str(ctype['contrib-type']) != "author":
@@ -65,7 +65,7 @@ for contrib in root.iter('contrib'):
         else:
             file.writelines(role + '. ')
 
-file.writelines('\n\nFunding Information:\n')
+file.writelines('\n\nFunding Information\n')
 for award_group in root.iter('award-group'):
     for award_recipient in award_group.iter('principal-award-recipient'):
         file.writelines(award_recipient.text + ', ')
